@@ -24,6 +24,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow: auto;
+  min-height: 200px;
 }
 
 .widgetSmListItem {
@@ -31,6 +33,12 @@
   align-items: center;
   justify-content: space-between;
   margin: 20px 0px;
+}
+
+.widgetSmUserInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .widgetSmUser {
