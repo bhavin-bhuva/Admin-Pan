@@ -11,7 +11,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export default function Chart({ title, data, dataKey, grid }) {
+export default function Chart({ title, data, dataKey, dataKey2, grid }) {
   return (
     <div className="chart">
       <h3 className="chartTitle">{title}</h3>
@@ -36,7 +36,9 @@ export default function Chart({ title, data, dataKey, grid }) {
             stroke="#5550bd"
             activeDot={{ r: 8 }}
           />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          {dataKey2 && (
+            <Line type="monotone" dataKey={dataKey2} stroke="#82ca9d" />
+          )}
         </LineChart>
       </ResponsiveContainer>
     </div>
